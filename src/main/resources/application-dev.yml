@@ -1,0 +1,15 @@
+spring:
+  mail:
+    host: 172.17.0.1
+    port: 1025
+    protocol: smtp
+    properties:
+      mail.smtp:
+        auth: false
+        starttls.enable: false
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+        ssl:
+          trust: "*"
+          enable: false

@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+        spring.json.value.default.type: com.example.common.event.UserEvent
+        spring.json.use.type.headers: false
+
+kafka:
+  topics:
+    user-created: user-created
+    user-deleted: user-deleted
+
+app:
+  email:
+    from: no-reply@mailhog.local
