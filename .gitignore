@@ -1,0 +1,8 @@
+.idea
+/target
+*.iml
+logs/
+*.log
+*.class
+.env
+Thumbs.db
