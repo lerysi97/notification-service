@@ -5,15 +5,18 @@ spring:
   mail:
     host: localhost
     port: ${greenMail.smtp.port}
-#    username: user
-#    password: admin
+    username: user
+    password: admin
     protocol: smtp
     properties:
       mail.smtp:
-#        auth: true
-#        starttls.enable: false
-#        ssl.enable: false
-      mail.debug: true
+        auth: true
+        starttls.enable: false
+        ssl.enable: false
+        mail.debug: true
+  cloud:
+    config:
+      enabled: false
 
 app:
   email:
